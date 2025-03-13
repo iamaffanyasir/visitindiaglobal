@@ -10,6 +10,14 @@ import UpcomingTrips from './components/UpcomingTrips';
 import WeekendTrips from './components/WeekendTrips';
 import './App.css';
 import { isMobileDevice } from './utils/deviceDetect';
+import MobileNavbar from './components/MobileNavbar';
+import MobileTopBar from './components/MobileTopBar';
+import MobileCarousel from './components/MobileCarousel';
+import MobileFeatured from './components/MobileFeatured';
+import MobileUpcoming from './components/MobileUpcoming';
+import MobileWeekend from './components/MobileWeekend';
+import MobileFooter from './components/MobileFooter';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   const [isMobile, setIsMobile] = useState(isMobileDevice());
@@ -29,11 +37,22 @@ function App() {
         <div className="app">
           <Routes>
             <Route path="/" element={
-              <div className="mobile-home">
-                {/* Your new mobile home components will go here */}
-                <h1>Mobile View Coming Soon</h1>
-              </div>
+              <>
+                <MobileTopBar />
+                <div className="mobile-home">
+                  <MobileCarousel />
+                  <MobileFeatured />
+                  <MobileUpcoming />
+                  <MobileWeekend />
+                  <MobileFooter />
+                  <FloatingWhatsApp />
+                </div>
+                <MobileNavbar />
+              </>
             } />
+            <Route path="/explore" element={<div>Explore Page</div>} />
+            <Route path="/trips" element={<div>Trips Page</div>} />
+            <Route path="/profile" element={<div>Profile Page</div>} />
             <Route path="/admin/login" element={<Login />} />
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin" element={<Navigate to="/admin/login" replace />} />

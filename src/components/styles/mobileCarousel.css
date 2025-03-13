@@ -1,0 +1,156 @@
+.mobcar-container {
+  width: 100vw;
+  height: 85vh;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  margin-bottom: 10px;
+}
+
+.mobcar-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mobcar-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mobcar-slide.active {
+  opacity: 1;
+}
+
+.mobcar-slide__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mobcar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobcar-slide__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/* Remove mobcar-social styles as we don't need them anymore */
+
+.mobcar-overlay {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.mobcar-explore {
+  font-size: 0.9rem;
+  letter-spacing: 0.4em;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out 0.5s, transform 0.8s ease-out 0.5s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.mobcar-heading {
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
+  color: white;
+  text-transform: capitalize;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out 0.7s, transform 0.8s ease-out 0.7s;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+  font-weight: 800;
+}
+
+.mobcar-slide.active .mobcar-explore,
+.mobcar-slide.active .mobcar-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobcar-locations {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+  width: 90%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mobcar-location {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobcar-location__name {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.mobcar-indicator {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 3;
+}
+
+.mobcar-indicator__line {
+  width: 2px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobcar-indicator__line.active {
+  background: white;
+  height: 40px;
+}
+
+.mobcar-loading {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: #000;
+}

@@ -76,3 +76,20 @@ html {
   scroll-behavior: smooth;
   font-family: 'Lexend', sans-serif;
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .main-content > *:not(.mobile-home) {
+    display: none !important;
+  }
+  
+  .mobile-home {
+    min-height: 100vh;
+    padding-top: 0; /* Remove top padding */
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to top */
+  }
+}

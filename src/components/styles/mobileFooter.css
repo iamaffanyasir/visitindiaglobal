@@ -1,0 +1,114 @@
+.mobfooter-container {
+  background-color: #ffffff;
+  padding: 2rem 0 calc(70px + 2rem) 0;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mobfooter-content {
+  padding: 0 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.mobfooter-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mobfooter-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobfooter-brand {
+  font-size: 1.5rem;
+  color: #212529;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.mobfooter-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mobfooter-nav-btn {
+  color: #495057;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  background: #f8f9fa;
+}
+
+.mobfooter-nav-btn:active {
+  background: #e9ecef;
+  color: #212529;
+  transform: scale(0.98);
+}
+
+.mobfooter-divider {
+  border: none;
+  border-top: 1px solid #dee2e6;
+  margin: 1.5rem 0;
+}
+
+.mobfooter-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mobfooter-social-link {
+  color: #495057;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+  border-radius: 50%;
+}
+
+.mobfooter-social-link:active {
+  background: #e9ecef;
+  color: #212529;
+  transform: scale(0.95);
+}
+
+.mobfooter-copyright {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.mobfooter-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Remove the gradient and decorative elements */
+.mobfooter-container::before,
+.mobfooter-container::after {
+  display: none;
+}

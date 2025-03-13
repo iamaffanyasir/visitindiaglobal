@@ -1,0 +1,222 @@
+.mobfeatured-container {
+  padding: 2rem 0 1rem 0;
+  background: #fff;
+  margin: 20px;
+}
+
+.mobfeatured-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+.mobfeatured-subtitle {
+  color: #6c757d;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.mobfeatured-title {
+  color: #212529;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.mobfeatured-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mobfeatured-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0.5rem 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mobfeatured-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.mobfeatured-tile {
+  flex: 0 0 75%;
+  scroll-snap-align: start;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.mobfeatured-tile-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mobfeatured-tile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobfeatured-tile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+}
+
+.mobfeatured-tile-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  /* margin: 0 0 0.5rem; */
+}
+
+.mobfeatured-tile-price {
+  /* display: flex;
+  align-items: center; */
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.mobfeatured-tile-caption {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0.25rem 0 0.5rem;
+}
+
+/* Modal Styles */
+.mobfeatured-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.mobfeatured-modal-content {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.mobfeatured-modal-image {
+  width: 100%;
+  height: 200px;
+}
+
+.mobfeatured-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobfeatured-modal-info {
+  padding: 1.5rem;
+}
+
+.mobfeatured-modal-info h2 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: #212529;
+}
+
+.mobfeatured-modal-caption {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0 0 1.5rem;
+}
+
+.mobfeatured-modal-description {
+  color: #495057;
+  line-height: 1.6;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.95rem;
+}
+
+.mobfeatured-modal-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobfeatured-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobfeatured-meta-item svg {
+  font-size: 1.25rem;
+  color: #6c757d;
+}
+
+.mobfeatured-meta-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobfeatured-meta-item span {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.mobfeatured-meta-item strong {
+  font-size: 1rem;
+  color: #212529;
+}
+
+.mobfeatured-enquire-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #212529;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.mobfeatured-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
