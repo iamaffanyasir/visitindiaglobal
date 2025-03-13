@@ -1,0 +1,242 @@
+.fdm-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fdm-add-section {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.fdm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fdm-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fdm-image-upload {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fdm-image-upload:hover {
+  border-color: var(--primary-color);
+  background: var(--hover-bg);
+}
+
+.fdm-file-input {
+  display: none;
+}
+
+.fdm-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.fdm-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary-color-light);
+}
+
+.fdm-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fdm-button:hover:not(:disabled) {
+  background: var(--primary-color-dark);
+  transform: translateY(-1px);
+}
+
+.fdm-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.fdm-error {
+  padding: 1rem;
+  background: var(--error-bg);
+  color: var(--error-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.fdm-success {
+  padding: 1rem;
+  background: var(--success-bg);
+  color: var(--success-color);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.fdm-loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-color-light);
+}
+
+.fdm-destinations-section {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.fdm-section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.fdm-section-header h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+  margin: 0;
+}
+
+.fdm-section-header h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0 0 0;
+  color: #333;
+}
+
+.fdm-destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.fdm-destination-card {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.fdm-destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.fdm-destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.fdm-destination-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+}
+
+.fdm-destination-content h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.fdm-destination-content p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.fdm-delete-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.fdm-delete-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fdm-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.fdm-nav-prev {
+  left: -20px;
+}
+
+.fdm-nav-next {
+  right: -20px;
+}
+
+.fdm-nav-button:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .fdm-container {
+    padding: 1rem;
+  }
+  
+  .fdm-destinations-grid {
+    grid-template-columns: 1fr;
+  }
+}

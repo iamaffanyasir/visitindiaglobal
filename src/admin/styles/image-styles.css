@@ -1,0 +1,46 @@
+/* Common image container styles */
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Carousel Manager specific styles */
+.crm-slide-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.crm-slide-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Featured Destination Manager specific styles */
+.fdm-destination-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.fdm-destination-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

@@ -1,0 +1,87 @@
+.ft-container {
+  background-color: #ffffff;
+  padding: 3rem 0;
+  margin-top: auto;
+}
+
+.ft-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.ft-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ft-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.ft-brand {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.ft-nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.ft-nav-btn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.ft-nav-btn:hover {
+  color: #007bff;
+}
+
+.ft-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+.ft-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.ft-copyright {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.ft-social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.ft-social-link {
+  color: #666;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.ft-social-link:hover {
+  color: #007bff;
+}

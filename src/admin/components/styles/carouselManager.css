@@ -1,0 +1,91 @@
+.crm-container {
+  padding: 2rem;
+}
+
+.crm-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.crm-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.crm-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.crm-form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.crm-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.crm-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.crm-slides {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.crm-slide {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crm-slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.crm-slide h3 {
+  padding: 1rem;
+  margin: 0;
+}
+
+.crm-locations {
+  padding: 0 1rem 1rem;
+}
+
+.crm-locations p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.crm-slide button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crm-slide button:hover {
+  background-color: #c82333;
+}
