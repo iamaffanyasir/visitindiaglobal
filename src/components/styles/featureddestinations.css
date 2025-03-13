@@ -232,8 +232,9 @@
 }
 
 .fd-container {
-  padding: 5rem 2rem;
+  padding: 5rem 0;
   background: #f8f9fa;
+  width: 100%;
 }
 
 .fd-header {
@@ -261,6 +262,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 3rem;
+  width: 100%;
 }
 
 .fd-carousel {
@@ -520,5 +522,18 @@
 @media (max-width: 576px) {
   .fd-tile {
     flex: 0 0 calc(100% - 2rem);
+  }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1025px) {
+  .fd-container {
+    width: 100vw;
+    margin: 0;
+    padding: 5rem 0;
+  }
+
+  .fd-carousel {
+    width: 100%;
   }
 }

@@ -61,7 +61,7 @@ const Carousel = () => {
               <div className="c-social">
                 <a href="https://wa.me/918506032347" className="c-social__icon"><FaWhatsapp /></a>
                 <a href="https://www.instagram.com/visitindiaglobal?igsh=MTY3ZGhuaXpuemZkeQ%3D%3D&utm_source=qr" className="c-social__icon"><FaInstagram /></a>
-                <a href="#" className="c-social__icon"><FaFacebook /></a>
+                {/* <a href="#" className="c-social__icon"><FaFacebook /></a> */}
               </div>
 
               <div className="c-overlay">

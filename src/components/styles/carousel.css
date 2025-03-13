@@ -501,3 +501,41 @@
   background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
   z-index: 1;
 }
+
+/* Tablet Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .c-heading {
+    font-size: 6rem;
+  }
+
+  .c-explore {
+    font-size: 1rem;
+  }
+
+  .c-social {
+    left: 30px;
+  }
+
+  .c-indicator {
+    right: 30px;
+  }
+
+  .c-locations {
+    padding: 0 30px;
+  }
+}
+
+/* Desktop Styles - Preserve original layout above 1024px */
+@media screen and (min-width: 1025px) {
+  .c-heading {
+    font-size: 8rem;
+  }
+
+  .c-social {
+    left: 50px;
+  }
+
+  .c-indicator {
+    right: 50px;
+  }
+}

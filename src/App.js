@@ -9,7 +9,7 @@ import FeaturedDestinations from './components/featureddestinations';
 import UpcomingTrips from './components/UpcomingTrips';
 import WeekendTrips from './components/WeekendTrips';
 import './App.css';
-import { isMobileDevice } from './utils/deviceDetect';
+import { isMobileDevice, isTabletDevice } from './utils/deviceDetect';
 import MobileNavbar from './components/MobileNavbar';
 import MobileTopBar from './components/MobileTopBar';
 import MobileCarousel from './components/MobileCarousel';
@@ -23,10 +23,12 @@ import MobileTestimonials from './components/MobileTestimonials';
 
 function App() {
   const [isMobile, setIsMobile] = useState(isMobileDevice());
+  const [isTablet, setIsTablet] = useState(isTabletDevice());
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(isMobileDevice());
+      setIsTablet(isTabletDevice());
     };
 
     window.addEventListener('resize', handleResize);
@@ -65,10 +67,10 @@ function App() {
     );
   }
 
-  // Desktop view remains unchanged
+  // Use desktop layout for desktop only
   return (
     <Router>
-      <div className="app">
+      <div className={`app ${isTablet ? 'tablet-view' : ''}`}>
         <Routes>
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
@@ -81,12 +83,10 @@ function App() {
                 <UpcomingTrips />
                 <WeekendTrips />
                 <Testimonials />
-                {/* Add other homepage components here */}
               </main>
               <Footer />
             </>
           } />
-          {/* Redirect /admin to /admin/login */}
           <Route path="/admin" element={<Navigate to="/admin/login" replace />} />
         </Routes>
       </div>

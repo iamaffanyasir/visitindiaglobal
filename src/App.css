@@ -93,3 +93,45 @@ html {
     justify-content: flex-start; /* Align content to top */
   }
 }
+
+/* Tablet Styles - Only apply between 769px and 1024px */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .tablet-view .main-content {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .tablet-view .carousel-container,
+  .tablet-view .featured-container,
+  .tablet-view .upcoming-container,
+  .tablet-view .weekend-container,
+  .tablet-view .testimonials-container {
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Adjust tile sizes for tablet */
+  .tablet-view .fd-tile,
+  .tablet-view .upcoming-tile,
+  .tablet-view .weekend-tile {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+/* Desktop Styles - Only apply above 1024px */
+@media screen and (min-width: 1025px) {
+  .main-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Reset any tablet-specific styles */
+  .fd-tile,
+  .upcoming-tile,
+  .weekend-tile {
+    flex: 0 0 calc(25% - 1.125rem);
+  }
+}

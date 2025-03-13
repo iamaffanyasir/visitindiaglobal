@@ -203,3 +203,38 @@
     font-size: 1rem;
   }
 }
+
+/* Tablet Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .tm-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .tm-testimonial {
+    max-width: 600px;
+  }
+
+  .tm-comment {
+    font-size: 1.1rem;
+  }
+
+  .tm-nav-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Desktop Styles - Preserve original layout above 1024px */
+@media screen and (min-width: 1025px) {
+  .tm-container {
+    padding: 5rem 2rem;
+  }
+
+  .tm-testimonial {
+    max-width: 800px;
+  }
+
+  .tm-comment {
+    font-size: 1.2rem;
+  }
+}
