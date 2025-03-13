@@ -22,6 +22,9 @@
   width: 60px;
   height: 60px;
   margin-bottom: 1rem;
+  border-radius: 50%; /* Added this line to make the logo circular */
+  object-fit: cover; /* Added to ensure the image fills the circle properly */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
 }
 
 .ft-brand {
@@ -33,9 +36,11 @@
 .ft-nav-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .ft-nav-btn {
@@ -79,9 +84,38 @@
 .ft-social-link {
   color: #666;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ft-social-link:hover {
   color: #007bff;
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+.ft-contact-btn {
+  display: none;
+}
+
+.ft-admin-btn {
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

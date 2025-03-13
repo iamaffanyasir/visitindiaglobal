@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaFacebookF, FaYoutube, FaPinterestP } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './styles/footer.css';
 
 const Footer = () => {
@@ -19,6 +20,7 @@ const Footer = () => {
           <a href="/upcoming" className="ft-nav-btn">Upcoming</a>
           <a href="/contact" className="ft-nav-btn">Contact Us</a>
           <a href="/privacy-policy" className="ft-nav-btn">Privacy Policy</a>
+          <Link to="/admin/login" className="ft-admin-btn">Admin Login</Link>
         </div>
 
         {/* Divider Line */}

@@ -1,42 +1,34 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './styles/navbar.css';
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 50;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
+      const scrolled = window.scrollY > 50;
+      if (scrolled !== isScrolled) {
+        setIsScrolled(scrolled);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
-
-  const handleAdminClick = () => {
-    navigate('/admin/login');
-  };
+  }, [isScrolled]);
 
   return (
-    <nav className={`nav-container ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
-        <a href="/" className="nav-logo">
-          VisitIndiaGlobal
-        </a>
-
+        <Link to="/" className="nav-logo">
+          Visit India Global
+        </Link>
         <div className="nav-links">
-          <a href="#destinations" className="nav-link">Destinations</a>
-          <a href="#featured" className="nav-link">Featured</a>
-          <a href="#upcoming" className="nav-link">Upcoming</a>
-          <a href="#contact" className="nav-link">Contact Us</a>
-          <button className="nav-button" onClick={handleAdminClick}>
-            Admin Login
-          </button>
+          <Link to="/destinations" className="nav-link">Destinations</Link>
+          <Link to="/featured" className="nav-link">Featured</Link>
+          <Link to="/upcoming" className="nav-link">Upcoming</Link>
+          <Link to="/contact" className="nav-link">Contact Us</Link>
         </div>
       </div>
     </nav>

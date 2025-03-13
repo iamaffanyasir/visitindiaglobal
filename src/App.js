@@ -18,6 +18,8 @@ import MobileUpcoming from './components/MobileUpcoming';
 import MobileWeekend from './components/MobileWeekend';
 import MobileFooter from './components/MobileFooter';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import Testimonials from './components/Testimonials';
+import MobileTestimonials from './components/MobileTestimonials';
 
 function App() {
   const [isMobile, setIsMobile] = useState(isMobileDevice());
@@ -44,6 +46,7 @@ function App() {
                   <MobileFeatured />
                   <MobileUpcoming />
                   <MobileWeekend />
+                  <MobileTestimonials />
                   <MobileFooter />
                   <FloatingWhatsApp />
                 </div>
@@ -77,6 +80,7 @@ function App() {
                 <FeaturedDestinations />
                 <UpcomingTrips />
                 <WeekendTrips />
+                <Testimonials />
                 {/* Add other homepage components here */}
               </main>
               <Footer />

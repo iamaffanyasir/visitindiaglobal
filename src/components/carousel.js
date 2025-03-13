@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { carouselData } from '../data/carouselData';
 import './styles/carousel.css';
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -59,9 +59,9 @@ const Carousel = () => {
               />
               
               <div className="c-social">
+                <a href="https://wa.me/918506032347" className="c-social__icon"><FaWhatsapp /></a>
+                <a href="https://www.instagram.com/visitindiaglobal?igsh=MTY3ZGhuaXpuemZkeQ%3D%3D&utm_source=qr" className="c-social__icon"><FaInstagram /></a>
                 <a href="#" className="c-social__icon"><FaFacebook /></a>
-                <a href="#" className="c-social__icon"><FaInstagram /></a>
-                <a href="#" className="c-social__icon"><FaTwitter /></a>
               </div>
 
               <div className="c-overlay">
@@ -80,7 +80,7 @@ const Carousel = () => {
               <div className="c-slide-number">
                 <span className="c-slide-number__current">0{index + 1}</span>
                 <div className="c-slide-number__line"></div>
-                <span className="c-slide-number__total">03</span>
+                <span className="c-slide-number__total">05</span>
               </div>
             </div>
           </div>
