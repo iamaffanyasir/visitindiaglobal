@@ -20,6 +20,8 @@ import MobileFooter from './components/MobileFooter';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Testimonials from './components/Testimonials';
 import MobileTestimonials from './components/MobileTestimonials';
+import Featured from './pages/featured';
+import SearchBar from './components/SearchBar';
 
 function App() {
   const [isMobile, setIsMobile] = useState(isMobileDevice());
@@ -35,7 +37,7 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (isMobile && window.location.pathname === '/') {
+  if (isMobile) {
     return (
       <Router>
         <div className="app">
@@ -52,6 +54,14 @@ function App() {
                   <MobileFooter />
                   <FloatingWhatsApp />
                 </div>
+                <MobileNavbar />
+              </>
+            } />
+            <Route path="/featured" element={
+              <>
+                <MobileTopBar />
+                <Featured />
+                <MobileFooter />
                 <MobileNavbar />
               </>
             } />
@@ -74,6 +84,7 @@ function App() {
         <Routes>
           <Route path="/admin/login" element={<Login />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/featured" element={<Featured />} />
           <Route path="/" element={
             <>
               <Navbar />
@@ -85,6 +96,7 @@ function App() {
                 <Testimonials />
               </main>
               <Footer />
+              <SearchBar />
             </>
           } />
           <Route path="/admin" element={<Navigate to="/admin/login" replace />} />

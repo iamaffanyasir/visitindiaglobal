@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaFacebookF, FaYoutube, FaPinterestP } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaYoutube, FaPinterestP, FaWhatsapp } from 'react-icons/fa';
 import './styles/mobileFooter.css';
 
 const MobileFooter = () => {
@@ -27,17 +27,11 @@ const MobileFooter = () => {
 
         <div className="mobfooter-bottom">
           <div className="mobfooter-social-icons">
-            <a href="https://instagram.com/visitindia" target="_blank" rel="noopener noreferrer" className="mobfooter-social-link">
+            <a href="https://www.instagram.com/visitindiaglobal?igsh=MTY3ZGhuaXpuemZkeQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" className="mobfooter-social-link">
               <FaInstagram />
             </a>
-            <a href="https://facebook.com/visitindia" target="_blank" rel="noopener noreferrer" className="mobfooter-social-link">
-              <FaFacebookF />
-            </a>
-            <a href="https://youtube.com/visitindia" target="_blank" rel="noopener noreferrer" className="mobfooter-social-link">
-              <FaYoutube />
-            </a>
-            <a href="https://pinterest.com/visitindia" target="_blank" rel="noopener noreferrer" className="mobfooter-social-link">
-              <FaPinterestP />
+            <a href="https://wa.me/918506032347" target="_blank" rel="noopener noreferrer" className="mobfooter-social-link">
+              <FaWhatsapp />
             </a>
           </div>
           <p className="mobfooter-copyright">© 2025 VisitIndiaGlobal. All rights reserved</p>

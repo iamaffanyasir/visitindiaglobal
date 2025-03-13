@@ -1,0 +1,356 @@
+.featurepage-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.featurepage-hero {
+  height: 100vh;  /* Changed from 50vh to 100vh */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../../public/assets/featured/hero.jpg'); /* Updated path to be relative */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
+  margin-top: 0;  /* Removed margin-top */
+  position: relative;  /* Added position relative */
+}
+
+.featurepage-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.featurepage-hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.featurepage-content {
+  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.featurepage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.featurepage-card {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  aspect-ratio: 2/3;
+}
+
+.featurepage-card:hover {
+  transform: translateY(-10px);
+}
+
+.featurepage-card-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.featurepage-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featurepage-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+}
+
+.featurepage-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+
+.featurepage-card-caption {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.featurepage-card-price {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Modal Styles */
+.featurepage-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.featurepage-modal-content {
+  background: white;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.featurepage-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+}
+
+.featurepage-modal-image {
+  height: 100%;
+}
+
+.featurepage-modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featurepage-modal-info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.featurepage-modal-info h2 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+  color: #212529;
+}
+
+.featurepage-modal-caption {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin: 0 0 1.5rem;
+}
+
+.featurepage-modal-description {
+  color: #495057;
+  line-height: 1.6;
+  margin: 0 0 2rem;
+}
+
+.featurepage-modal-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.featurepage-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featurepage-meta-item svg {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+.featurepage-meta-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.featurepage-meta-item span {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.featurepage-meta-item strong {
+  color: #212529;
+  font-size: 1.1rem;
+}
+
+.featurepage-enquire-btn {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: #212529;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.featurepage-enquire-btn:hover {
+  background: #343a40;
+  transform: translateY(-2px);
+}
+
+.featurepage-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: white;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.featurepage-modal-close:hover {
+  background: #e9ecef;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .featurepage-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .featurepage-content {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featurepage-modal-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featurepage-modal-image {
+    height: 300px;
+  }
+  
+  .featurepage-modal-info {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .featurepage-container {
+    padding-bottom: 70px; /* Space for mobile navigation */
+    width: 100%; /* Added to ensure full width */
+  }
+
+  .featurepage-hero {
+    height: 50vh; /* Shorter hero section for mobile */
+    padding-top: 60px; /* Account for MobileTopBar */
+    width: 100vw; /* Added to ensure full width */
+    margin-left: -20px; /* Added to offset any parent padding */
+    margin-right: -20px; /* Added to offset any parent padding */
+  }
+
+  .featurepage-hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .featurepage-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .featurepage-content {
+    padding: 2rem 1rem;
+    width: 100%; /* Added to ensure full width */
+  }
+
+  .featurepage-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .featurepage-card {
+    aspect-ratio: 16/9; /* More landscape format for mobile */
+  }
+
+  .featurepage-card-overlay {
+    padding: 1rem;
+  }
+
+  .featurepage-card-title {
+    font-size: 1.25rem;
+  }
+
+  .featurepage-modal {
+    padding: 0;
+  }
+
+  .featurepage-modal-content {
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .featurepage-modal-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .featurepage-modal-image {
+    height: 40vh;
+  }
+
+  .featurepage-modal-info {
+    padding: 1.5rem;
+  }
+
+  .featurepage-modal-info h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .featurepage-hero-title {
+    font-size: 2rem;
+  }
+  
+  .featurepage-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .featurepage-modal {
+    padding: 1rem;
+  }
+}

@@ -92,6 +92,11 @@ html {
     align-items: center;
     justify-content: flex-start; /* Align content to top */
   }
+
+  /* Hide desktop search bar on mobile */
+  .searchbar-button {
+    display: none !important;
+  }
 }
 
 /* Tablet Styles - Only apply between 769px and 1024px */

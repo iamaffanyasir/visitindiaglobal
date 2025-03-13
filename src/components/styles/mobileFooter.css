@@ -5,6 +5,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .mobfooter-content {
@@ -111,4 +112,50 @@
 .mobfooter-container::before,
 .mobfooter-container::after {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .mobfooter-container {
+    margin: 0; /* Remove any margins */
+    width: 100vw; /* Full viewport width */
+    margin-left: -20px; /* Offset parent padding if any */
+    margin-right: -20px; /* Offset parent padding if any */
+    padding: 2rem 0 calc(70px + 2rem) 0;
+  }
+
+  .mobfooter-content {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .mobfooter-nav-links {
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .mobfooter-nav-btn {
+    margin: 0.25rem;
+  }
+
+  .mobfooter-social-icons {
+    width: 100%;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
+  .mobfooter-divider {
+    width: calc(100% - 3rem);
+    margin: 1.5rem auto;
+  }
+
+  .mobfooter-copyright {
+    width: 100%;
+    text-align: center;
+    padding: 0 1rem;
+  }
 }
